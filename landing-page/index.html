@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaEnergía | Energía Renovable</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#0e0f12] text-white">
+    <div
+      id="loader"
+      class="fixed inset-0 flex items-center justify-center bg-[#0e0f12] z-50"
+    >
+      <div
+        class="loader ease-linear rounded-full border-8 border-t-8 border-green-500 h-24 w-24"
+      ></div>
+    </div>
+
+    <div id="content" class="hidden">
+      <!-- Header -->
+      <header
+        id="main-header"
+        class="fixed w-full top-0 left-0 z-50 transition-all duration-300 bg-transparent"
+      >
+        <div class="container mx-auto flex justify-between items-center p-4">
+          <div class="text-2xl font-bold text-green-600">NovaEnergía</div>
+          <nav class="hidden md:flex space-x-4 text-white" id="menu-links">
+            <a href="#hero" class="transition text-white">Inicio</a>
+            <a href="#services" class="transition text-white">Servicios</a>
+            <a href="#testimonials" class="transition text-white"
+              >Testimonios</a
+            >
+            <a href="#contact" class="transition text-white">Contacto</a>
+          </nav>
+
+          <div class="md:hidden">
+            <button id="menu-toggle" class="focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+          <nav class="flex flex-col space-y-2 p-4">
+            <a href="#hero" class="hover:text-green-500">Inicio</a>
+            <a href="#services" class="hover:text-green-500">Servicios</a>
+            <a href="#testimonials" class="hover:text-green-500">Testimonios</a>
+            <a href="#contact" class="hover:text-green-500">Contacto</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Hero -->
+      <section
+        id="hero"
+        class="relative h-screen flex items-center justify-center text-white text-center overflow-hidden"
+        data-aos="fade-zoom-in"
+      >
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source src="assets/videos/hero.mp4" type="video/mp4" />
+          Tu navegador no soporta el video.
+        </video>
+        <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+        <div class="relative z-20 p-8">
+          <h1 class="text-5xl font-bold">
+            Energía Limpia para un Futuro Brillante
+          </h1>
+          <p class="mt-4 text-lg">
+            Soluciones sostenibles para hogares y empresas.
+          </p>
+          <a
+            href="#contact"
+            class="mt-6 inline-block bg-white text-green-600 px-6 py-3 rounded-full hover:bg-gray-200 transition"
+            >Solicita una Cotización</a
+          >
+        </div>
+      </section>
+      <!-- Estadísticas 1-->
+      <section
+        id="stats"
+        class="relative py-20 bg-fixed bg-center bg-cover text-white"
+        style="background-image: url('assets/img/planeta.jpg')"
+      >
+        <div
+          class="absolute inset-0 bg-black/90 z-0 backdrop-blur-sm"
+          style="background-color: rgba(63, 93, 72, 0.211)"
+        ></div>
+        <div class="relative container mx-auto text-center z-10 space-y-16">
+          <div class="max-w-3xl mx-auto" data-aos="fade-up">
+            <h3 class="text-2xl md:text-3xl font-semibold text-green-300">
+              “Cada rayo de sol que capturamos, es una inversión en el futuro
+              del planeta.”
+            </h3>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div data-aos="fade-up" data-aos-delay="100">
+              <p
+                class="text-5xl font-bold text-green-300 counter"
+                data-target="250"
+              >
+                0
+              </p>
+              <p class="mt-2 text-lg text-white">Clientes Satisfechos</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+              <p
+                class="text-5xl font-bold text-green-300 counter"
+                data-target="135"
+              >
+                0
+              </p>
+              <p class="mt-2 text-lg text-white">Proyectos Completados</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+              <p
+                class="text-5xl font-bold text-green-300 counter"
+                data-target="5000"
+              >
+                0
+              </p>
+              <p class="mt-2 text-lg text-white">KWh Generados</p>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 text-sm text-gray-300"
+          >
+            <div data-aos="fade-up" data-aos-delay="400">
+              <p class="font-medium">
+                🌱 Más de 1,000 toneladas de CO₂ evitadas
+              </p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="500">
+              <p class="font-medium">
+                🔋 Instalaciones con 98% de eficiencia energética
+              </p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600">
+              <p class="font-medium">
+                💡 Ahorros de hasta 70% en consumo eléctrico
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-b from-transparent to-black z-10"
+        ></div>
+      </section>
+      <section id="services" class="py-24 relative overflow-hidden">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-[.2] contrast-125"
+        >
+          <source src="assets/videos/hero.mp4" type="video/mp4" />
+          Tu navegador no soporta el video.
+        </video>
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80 z-0"
+          style="background-color: #000000d6"
+        ></div>
+        <div class="relative z-10 container mx-auto text-center px-4">
+          <h2
+            class="text-3xl font-bold mb-12 text-green-400 drop-shadow"
+            data-aos="fade-up"
+          >
+            Nuestros Servicios
+          </h2>
+
+          <div class="swiper mySwiper" data-aos="fade-up">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl shadow-lg p-6 flex flex-col items-center text-white"
+              >
+                <video
+                  class="w-full h-48 object-cover rounded mb-4"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                >
+                  <source src="assets/videos/solar.mp4" type="video/mp4" />
+                </video>
+                <h3 class="text-xl font-semibold text-green-400 mb-2">
+                  Energía Solar
+                </h3>
+                <p class="text-sm text-slate-200">
+                  Paneles solares para hogares y empresas.
+                </p>
+              </div>
+              <div
+                class="swiper-slide bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl shadow-lg p-6 flex flex-col items-center text-white"
+              >
+                <video
+                  class="w-full h-48 object-cover rounded mb-4"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                >
+                  <source src="assets/videos/eolica.mp4" type="video/mp4" />
+                </video>
+                <h3 class="text-xl font-semibold text-green-400 mb-2">
+                  Energía Eólica
+                </h3>
+                <p class="text-sm text-slate-200">
+                  Generación eléctrica con turbinas.
+                </p>
+              </div>
+              <div
+                class="swiper-slide bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl shadow-lg p-6 flex flex-col items-center text-white"
+              >
+                <video
+                  class="w-full h-48 object-cover rounded mb-4"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                >
+                  <source
+                    src="assets/videos/consultoria.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <h3 class="text-xl font-semibold text-green-400 mb-2">
+                  Consultoría Energética
+                </h3>
+                <p class="text-sm text-slate-200">
+                  Planes personalizados de eficiencia energética.
+                </p>
+              </div>
+
+              <div
+                class="swiper-slide bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl shadow-lg p-6 flex flex-col items-center text-white"
+              >
+                <video
+                  class="w-full h-48 object-cover rounded mb-4"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                >
+                  <source
+                    src="assets/videos/reciclaje.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <h3 class="text-xl font-semibold text-green-400 mb-2">
+                  Infraestructura Verde
+                </h3>
+                <p class="text-sm text-slate-200">
+                  Construcción sostenible para empresas.
+                </p>
+              </div>
+              <div
+                class="swiper-slide bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl shadow-lg p-6 flex flex-col items-center text-white"
+              >
+                <video
+                  class="w-full h-48 object-cover rounded mb-4"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                >
+                  <source src="assets/videos/reciclaje.mp4" type="video/mp4" />
+                </video>
+                <h3 class="text-xl font-semibold text-green-400 mb-2">
+                  Gestión de Residuos
+                </h3>
+                <p class="text-sm text-slate-200">
+                  Soluciones para reciclaje corporativo.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-pagination mt-6"></div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="relative py-20 bg-center bg-cover text-white"
+        style="background-image: url('assets/img/contactanos.jpg')"
+      >
+        <div
+          class="absolute inset-0 bg-black opacity-100 z-0"
+          style="background-color: rgb(0 0 0 / 60%)"
+        ></div>
+        <div
+          class="relative z-10 container mx-auto text-center px-4"
+          data-aos="fade-up"
+        >
+          <h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-4">
+            ¿Quieres unirte a nuestros clientes satisfechos?
+          </h2>
+          <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
+            Déjanos ayudarte a transformar tu hogar o empresa con energía solar
+            confiable, eficiente y sostenible.
+          </p>
+          <div class="mt-8">
+            <a
+              href="#contact"
+              class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition"
+            >
+              Contáctanos ahora
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonios -->
+      <section id="testimonials" class="py-20 relative overflow-hidden">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-[.2] contrast-125"
+        >
+          <source src="assets/videos/hero.mp4" type="video/mp4" />
+          Tu navegador no soporta el video.
+        </video>
+
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80 z-0"
+          style="background-color: #000000d6"
+        ></div>
+
+        <div class="relative z-10 container mx-auto text-center px-4">
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-12 text-green-400 drop-shadow"
+            data-aos="fade-up"
+          >
+            Clientes Satisfechos
+          </h2>
+
+          <div class="grid md:grid-cols-3 gap-8">
+         
+            <div
+              class="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl shadow-xl p-6 text-white hover:scale-[1.02] transition"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img
+                src="assets/img/testimonio1.jpg"
+                alt="Laura M."
+                class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-green-400 object-cover shadow-lg"
+              />
+              <p class="italic text-slate-200">
+                "Instalar paneles solares con NovaEnergía fue la mejor decisión
+                para mi hogar."
+              </p>
+              <cite class="block mt-4 font-semibold text-green-300"
+                >– Laura M.</cite
+              >
+            </div>
+            <div
+              class="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl shadow-xl p-6 text-white hover:scale-[1.02] transition"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="assets/img/testimonio2.png"
+                alt="Carlos R."
+                class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-green-400 object-cover shadow-lg"
+              />
+              <p class="italic text-slate-200">
+                "Excelente servicio técnico y asesoría en todo el proceso."
+              </p>
+              <cite class="block mt-4 font-semibold text-green-300"
+                >– Carla R.</cite
+              >
+            </div>
+
+            <div
+              class="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl shadow-xl p-6 text-white hover:scale-[1.02] transition"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <img
+                src="assets/img/testimonio3.jpg"
+                alt="Andrea G."
+                class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-green-400 object-cover shadow-lg"
+              />
+              <p class="italic text-slate-200">
+                "Gracias a su consultoría, mi empresa redujo el consumo
+                energético un 40%."
+              </p>
+              <cite class="block mt-4 font-semibold text-green-300"
+                >– Andrea G.</cite
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Estadísticas 2 -->
+      <section
+        id="stats"
+        class="relative py-16 bg-fixed bg-center bg-cover text-white"
+        style="background-image: url('assets/img/estadisticas.jpg')"
+      >
+        <div class="absolute inset-0 bg-black/80 z-0 backdrop-blur-sm"></div>
+        <div class="relative container mx-auto text-center z-10">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div data-aos="fade-up" data-aos-delay="100">
+              <p
+                class="text-5xl font-bold text-green-300 counter"
+                data-target="250"
+              >
+                0
+              </p>
+              <p class="mt-2 text-lg text-white">Clientes Satisfechos</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+              <p
+                class="text-5xl font-bold text-green-300 counter"
+                data-target="135"
+              >
+                0
+              </p>
+              <p class="mt-2 text-lg text-white">Proyectos Completados</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+              <p
+                class="text-5xl font-bold text-green-300 counter"
+                data-target="5000"
+              >
+                0
+              </p>
+              <p class="mt-2 text-lg text-white">KWh Generados</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-black z-10"
+        ></div>
+      </section>
+      <section
+        id="contact"
+        class="contact-section relative overflow-hidden py-24 text-white"
+      >
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-[.2] contrast-125"
+        >
+          <source src="assets/videos/hero.mp4" type="video/mp4" />
+          Tu navegador no soporta el video.
+        </video>
+
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80 z-0"
+          style="background-color: #000000d6"
+        ></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto px-6">
+          <div
+            class="border border-white/30 rounded-2xl p-8 md:p-10 bg-white/5 backdrop-blur-lg shadow-xl"
+          >
+            <h2
+              class="text-3xl md:text-4xl font-bold text-center text-green-400 mb-4"
+              data-aos="fade-up"
+            >
+              Contáctanos
+            </h2>
+            <p class="text-center text-slate-300 mb-10" data-aos="fade-up">
+              Estamos listos para acompañarte en tu proyecto energético.
+            </p>
+
+            <form
+              action="contacto.php"
+              method="POST"
+              class="grid gap-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div>
+                <label
+                  for="name"
+                  class="block mb-2 text-sm font-medium text-slate-200"
+                  >Nombre</label
+                >
+                <div class="relative">
+                  <i
+                    class="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-green-400"
+                  ></i>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Tu nombre"
+                    class="w-full bg-white/10 text-white pl-10 pr-4 py-3 rounded-lg backdrop-blur-md border border-white/10 focus:outline-none focus:ring-2 focus:ring-green-400"
+                    required
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-slate-200"
+                  >Correo electrónico</label
+                >
+                <div class="relative">
+                  <i
+                    class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-green-400"
+                  ></i>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="correo@ejemplo.com"
+                    class="w-full bg-white/10 text-white pl-10 pr-4 py-3 rounded-lg backdrop-blur-md border border-white/10 focus:outline-none focus:ring-2 focus:ring-green-400"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-span-full">
+                <label
+                  for="message"
+                  class="block mb-2 text-sm font-medium text-slate-200"
+                  >Mensaje</label
+                >
+                <div class="relative">
+                  <i
+                    class="fas fa-comment-dots absolute left-3 top-4 text-green-400"
+                  ></i>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Escribe tu mensaje..."
+                    class="w-full bg-white/10 text-white pl-10 pr-4 pt-3 pb-3 rounded-lg backdrop-blur-md border border-white/10 focus:outline-none focus:ring-2 focus:ring-green-400"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+              <div class="text-center mt-4">
+                <button
+                  type="submit"
+                  class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition"
+                >
+                  Enviar mensaje
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bg-black text-white py-8 px-6 md:px-12">
+        <div
+          class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-center gap-8 text-sm text-gray-300"
+        >
+          <div class="flex flex-col md:items-start items-center">
+            <h3 class="text-xl font-bold text-green-400">NovaEnergía</h3>
+            <p class="text-xs text-gray-500 mt-1">&copy; 2025 NovaEnergía</p>
+          </div>
+
+          <div class="flex flex-wrap justify-center gap-5 text-xs">
+            <a href="#" class="hover:text-green-400 transition"
+              >Política de Privacidad</a
+            >
+            <a href="#" class="hover:text-green-400 transition"
+              >Términos y Condiciones</a
+            >
+            <a href="#" class="hover:text-green-400 transition">Aviso Legal</a>
+          </div>
+
+          <div class="flex gap-5">
+            <a href="#" class="hover:text-green-400 transition">Facebook</a>
+            <a href="#" class="hover:text-green-400 transition">LinkedIn</a>
+            <a href="#" class="hover:text-green-400 transition">Instagram</a>
+          </div>
+
+          <div class="text-xs text-gray-500 italic flex items-center justify-center md:justify-end gap-2">
+        <span>Hecho por</span>
+        <img src="assets/img/milogo.png" alt="falubi logo" class="h-4 w-auto" />
+        <a href="https://missatest.com/" class="text-green-400 hover:underline">falubi</a>
+        </div>
+
+        </div>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
