@@ -1,7 +1,7 @@
 
 <div align="center">
   <img src="landing-page/assets/img/milogo.png" alt="NovaEnergía Logo" width="150" />
-  <h1>Diseño — Landing Page Profesional</h1>
+  <h1>Diseño — Landing Page Profesional Básica</h1>
   <p>
     Sitio web moderno, responsivo y atractivo para impulsar tu presencia digital.<br />
     Desarrollado con <strong>Tailwind CSS</strong>, <strong>HTML5</strong> y <strong>JavaScript</strong>.
